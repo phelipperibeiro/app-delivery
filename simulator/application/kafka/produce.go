@@ -13,9 +13,10 @@ import (
 // Produce is responsible to publish the positions of each request
 
 // Example of a json request:
-//{"clientId":"1","routeId":"1"}
-//{"clientId":"2","routeId":"2"}
-//{"clientId":"3","routeId":"3"}
+// {"clientId":"1","routeId":"1"}
+// {"clientId":"2","routeId":"2"}
+// {"clientId":"3","routeId":"3"}
+// {"clientId":"3","routeId":"4"}
 
 func Produce(msg *confluentKafka.Message) {
 	producer := kafkaInfrastructure.NewKafkaProducer()
@@ -28,6 +29,6 @@ func Produce(msg *confluentKafka.Message) {
 	}
 	for _, position := range positions {
 		kafkaInfrastructure.Publish(position, os.Getenv("KafkaProduceTopic"), producer)
-		time.Sleep(time.Millisecond * 1000)
+		time.Sleep(time.Millisecond * 10000)
 	}
 }
