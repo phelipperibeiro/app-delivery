@@ -1,3 +1,5 @@
+# App Delivery (Aplicação/front-end)
+
 ## Descrição
 
 Repositório do front-end feito com React.js (Front-end)
@@ -14,6 +16,11 @@ Acrescente no seu /etc/hosts:
 127.0.0.1 host.docker.internal
 ```
 Em todos os sistemas operacionais é necessário abrir o programa para editar o *hosts* como Administrator da máquina ou root.
+
+## Serviços da Google que precisam ser habilitados
+
+- Maps JavaScript API
+- Directions API
 
 ## Rodar a aplicação
 
