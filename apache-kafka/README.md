@@ -24,3 +24,6 @@ docker-compose up
 ```
 
 Quando parar os containers do Kafka, lembre-se antes de rodar o **docker-compose up**, rodar o **docker-compose down** para limpar o armazenamento, senão lançará erro ao subir novamente.
+
+
+Acessar o confluent http://localhost:9021/clusters.
