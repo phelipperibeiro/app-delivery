@@ -6,7 +6,7 @@ RUN chmod 777 -R /usr/share/elasticsearch/
 RUN chown -R elasticsearch:elasticsearch /usr/share/elasticsearch
 USER elasticsearch
 
-
+# sudo sysctl -w vm.max_map_count=262144
 # rm -Rf es01
 # mkdir -p es01/usr/share/elasticsearch/data
 # RUN chown 1000:1000 -R /usr/share/elasticsearch
