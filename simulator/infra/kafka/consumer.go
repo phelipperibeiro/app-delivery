@@ -26,10 +26,10 @@ func (k *KafkaConsumer) Consume() {
 	configMap := &confluentKafka.ConfigMap{
 		"bootstrap.servers": os.Getenv("KafkaBootstrapServers"),
 		"group.id":          os.Getenv("KafkaConsumerGroupId"),
-		//"security.protocol": os.Getenv("security.protocol"),
-		//"sasl.mechanisms":   os.Getenv("sasl.mechanisms"),
-		//"sasl.username":     os.Getenv("sasl.username"),
-		//"sasl.password":     os.Getenv("sasl.password"),
+		"security.protocol": os.Getenv("security.protocol"),
+		"sasl.mechanisms":   os.Getenv("sasl.mechanisms"),
+		"sasl.username":     os.Getenv("sasl.username"),
+		"sasl.password":     os.Getenv("sasl.password"),
 	}
 	kafkaConsumer, err := confluentKafka.NewConsumer(configMap)
 	if err != nil {

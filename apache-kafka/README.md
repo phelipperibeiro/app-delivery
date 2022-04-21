@@ -65,3 +65,9 @@ Testar o elasticsearch:
 ```
 curl -XGET http://127.0.0.1:9200
 ```
+
+### Acessos remotos
+
+```
+https://confluent.cloud/
+```

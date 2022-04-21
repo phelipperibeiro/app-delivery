@@ -11,10 +11,10 @@ import (
 func NewKafkaProducer() *confluentKafka.Producer {
 	configMap := &confluentKafka.ConfigMap{
 		"bootstrap.servers": os.Getenv("KafkaBootstrapServers"),
-		//"security.protocol": os.Getenv("security.protocol"),
-		//"sasl.mechanisms":   os.Getenv("sasl.mechanisms"),
-		//"sasl.username":     os.Getenv("sasl.username"),
-		//"sasl.password":     os.Getenv("sasl.password"),
+		"security.protocol": os.Getenv("security.protocol"),
+		"sasl.mechanisms":   os.Getenv("sasl.mechanisms"),
+		"sasl.username":     os.Getenv("sasl.username"),
+		"sasl.password":     os.Getenv("sasl.password"),
 	}
 	kafkaProducer, err := confluentKafka.NewProducer(configMap)
 	if err != nil {

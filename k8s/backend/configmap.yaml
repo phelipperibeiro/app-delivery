@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-conf
+data:
+  env: |
+    MONGO_DSN=mongodb://root:root@mongodb/nest?authSource=admin
+    KAFKA_CLIENT_ID=nest-api
+    KAFKA_BROKER=pkc-6ojv2.us-west4.gcp.confluent.cloud:9092
+    KAFKA_CONSUMER_GROUP_ID=nest-api
+    KAFKA_SASL_USERNAME=6GE2AIDLHUQ3QUMS
+    KAFKA_SASL_PASSWORD=l6EyVqtHiDtUCI0xkgoBNvByDcexmTDt2efAB6DvuhgS7/p6YQjwqM27bLCZKSrd
